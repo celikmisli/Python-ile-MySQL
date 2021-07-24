@@ -2,13 +2,13 @@
 
 import mysql.connector
 
-mydb=mysql.connector.connect(
+mislidb=mysql.connector.connect(
     host="localhost",
     user="root",
     password="mysqlkullanıyorum123"
 )
 
-mycursor=mydb.cursor()
+mycursor=mislidb.cursor()
 
 mycursor.execute("CREATE DATABASE sirket")
 
@@ -16,13 +16,13 @@ mycursor.execute("CREATE DATABASE sirket")
 
 import mysql.connector
 
-mydb=mysql.connector.connect(
+mislidb=mysql.connector.connect(
     host="localhost",
     user="root",
     password="mysqlkullanıyorum123"
 )
 
-mycursor=mydb.cursor()
+mycursor=mislidb.cursor()
 
 mycursor.execute("SHOW DATABASES")
 
@@ -33,27 +33,27 @@ for x in mycursor: #For komutu kullanma sebebimiz tüm verileri bizlere sunabilm
 
 import mysql.connector
 
-mydb=mysql.connector.connect(
+mislidb=mysql.connector.connect(
     host="localhost",
     user="root",
     password="mysqlkullanıyorum123",
     database="sirket"
 )
 
-mycursor=mydb.cursor()
+mycursor=mislidb.cursor()
 
 #Tablo Oluşturma
 
 import mysql.connector
 
-mydb=mysql.connector.connect(
+mislidb=mysql.connector.connect(
     host="localhost",
     user="root",
     password="mysqlkullanıyorum123",
     database="sirket"
 )
 
-mycursor=mydb.cursor()
+mycursor=mislidb.cursor()
 
 mycursor.execute(
     "CREATE TABLE proje (proje_no INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, proje_ad VARCHAR(20) UNIQUE NOT NULL,baslama_tarihi DATE NOT NULL,planlanan_bitis_tarihi DATE NOT NULL)"
